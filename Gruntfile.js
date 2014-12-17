@@ -38,8 +38,7 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    // includes files within path
-                    //{expand: true, src: ['js/lib/modernizr/modernizr.js'], dest: 'dest/', filter: 'isFile'},
+                    { src: ['js/lib/normalize.css/normalize.css'], dest: 'dist/css/normalize.css', filter: 'isFile'},
 
                 ]
             }
@@ -79,6 +78,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'sass:dev', 'watch']);
+    grunt.registerTask('default', ['uglify', 'copy', 'sass:dev', 'watch']);
 
 };
