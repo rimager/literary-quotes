@@ -1,9 +1,9 @@
-js
+Literary Quotes
 ==
 
-A collection of Javascript projects using various libraries:
+A showcase of the best literary quotes from my own collection. Created with the following Javascript libraries
 
 * modernizr
 * masonry
 
-Also using bower to retrieve Libraries and Grunt to minify and move to the dist/js folder.
+Also using bower to retrieve Libraries and Grunt to compile SASS, minify and move to the dist/js folder.
