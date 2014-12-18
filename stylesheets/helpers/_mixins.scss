@@ -1,0 +1,27 @@
+.train{
+  @include background-size(cover);
+  background-image: url(https://farm9.staticflickr.com/8494/8346612726_d791722cc3_n.jpg);
+}
+
+.radial-gradient {
+  @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+}
+
+// This yields a linear gradient spanning from the upper left corner to the lower right corner
+.linear-gradient {
+  @include background-image(linear-gradient(to bottom right, white, #dddddd));
+}
+
+// This yields a gradient starting at the top with #fff, ending in #aaa
+.v-gradient {
+  @include background-image(linear-gradient(white, #aaaaaa));
+}
+
+.angle-gradient {
+  $svg-gradient-shim-threshold: 1 !global;
+  @include background-image(linear-gradient(120deg, #2ac363, #cd8c14, #9c4cc2));
+}
+
+.grey-overlay{
+  box-shadow: inset 0 0 0 1000px rgba(24,27,32,.5);
+}

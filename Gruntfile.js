@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    { src: ['js/lib/normalize.css/normalize.css'], dest: 'dist/css/normalize.css', filter: 'isFile'},
+                    { src: ['js/lib/normalize.scss/_normalize.scss'], dest: 'stylesheets/base/_normalize.scss', filter: 'isFile'},
 
                 ]
             }
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                     compass: true
                 },
                 files: {
-                    'dist/css/style.css': 'scss/style.scss'
+                    'dist/css/style.css': 'stylesheets/main.scss'
                 }
             },
             dist: {
@@ -60,13 +60,13 @@ module.exports = function(grunt) {
                     compass: true
                 },
                 files: {
-                    'dist/css/style.css': 'scss/style.scss'
+                    'dist/css/style.css': 'stylesheets/main.scss'
                 }
             }
         },
         watch: {
             sass: {
-                files: 'scss/{,*/}*.{scss,sass}',
+                files: 'stylesheets/{,*/}*.{scss,sass}',
                 tasks: ['sass:dev']
             }
         }
